@@ -5,6 +5,14 @@
   </p>
 
   <p>
+    <strong>Choices:</strong>
+    <ul>
+      <% question.choices.each do |choice| %>
+        <li><%= choice.name %></li>
+      <% end %>
+    </ul>
+
+  <p>
     <strong>Date published:</strong>
     <%= question.date_published %>
   </p>

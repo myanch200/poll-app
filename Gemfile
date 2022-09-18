@@ -70,3 +70,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# non defaults
+
+# cocoon for nested forms
+gem "cocoon"

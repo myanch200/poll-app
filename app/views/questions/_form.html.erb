@@ -16,6 +16,15 @@
     <%= form.text_field :name %>
   </div>
 
+  <div id="choices">
+    <%= form.fields_for :choices do |choice_form| %>
+      <%= render "choice_fields", f: choice_form %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association "add choice", form, :choices %>
+    </div>
+  </div>
+
   <div>
     <%= form.label :date_published, style: "display: block" %>
     <%= form.datetime_field :date_published %>
