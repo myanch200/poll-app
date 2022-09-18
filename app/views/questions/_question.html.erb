@@ -8,7 +8,8 @@
     <strong>Choices:</strong>
     <ul>
       <% question.choices.each do |choice| %>
-        <li><%= choice.name %></li>
+        <%= button_to choice.name, question_choice_answers_path(question, choice)%> - <p><%= choice.votes %></p>
+        <br>
       <% end %>
     </ul>
 
