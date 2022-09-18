@@ -4,14 +4,14 @@
     <%= question.name %>
   </p>
 
-  <p>
-    <strong>Choices:</strong>
-    <ul>
-      <% question.choices.each do |choice| %>
-        <%= button_to choice.name, question_choice_answers_path(question, choice)%> - <p><%= choice.votes %></p>
-        <br>
-      <% end %>
-    </ul>
+  <%= turbo_stream_from 'choices'%>
+    <%= turbo_frame_tag "choices" do %>
+      <p>
+        <strong>Choices:</strong>
+        <%= render question.choices %>
+      </p>
+    <% end %>
+
 
   <p>
     <strong>Date published:</strong>

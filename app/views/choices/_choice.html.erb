@@ -1,14 +1,7 @@
 <div id="<%= dom_id choice %>">
   <p>
-    <strong>Name:</strong>
-    <%= choice.name %>
+    <%= button_to choice.name, question_choice_answers_path(choice.question, choice)%>
   </p>
-
-  <p>
-    <strong>Question:</strong>
-    <%= choice.question_id %>
-  </p>
-
   <p>
     <strong>Votes:</strong>
     <%= choice.votes %>

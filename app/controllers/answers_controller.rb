@@ -2,7 +2,8 @@ class AnswersController < ApplicationController
   before_action :set_question
   before_action :set_choice, only: %i[create]
   def create
-    @choice.increment!(:votes)
+    @choice.increment(:votes)
+    @choice.save
     redirect_to question_path(@question)
   end
 
