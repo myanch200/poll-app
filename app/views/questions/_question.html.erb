@@ -3,19 +3,10 @@
     <strong>Name:</strong>
     <%= question.name %>
   </p>
-
-  <%= turbo_stream_from 'choices'%>
-    <%= turbo_frame_tag "choices" do %>
-      <p>
-        <strong>Choices:</strong>
-        <%= render question.choices %>
-      </p>
-    <% end %>
-
-
   <p>
-    <strong>Date published:</strong>
-    <%= question.date_published %>
+    <strong>Choices:</strong>
+    <%= render question.choices %>
   </p>
+
 
 </div>
