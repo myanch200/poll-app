@@ -75,3 +75,5 @@ end
 
 # cocoon for nested forms
 gem "cocoon"
+
+gem "tailwindcss-rails", "~> 2.0"
