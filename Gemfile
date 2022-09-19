@@ -77,3 +77,5 @@ end
 gem "cocoon"
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "hotwire-livereload", "~> 1.2", :group => :development
