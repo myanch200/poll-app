@@ -1,0 +1,8 @@
+%p{:style => "color: green"}= notice
+%h1 Choices
+#choices
+  - @choices.each do |choice|
+    = render choice
+    %p
+      = link_to "Show this choice", choice
+= link_to "New choice", new_choice_path

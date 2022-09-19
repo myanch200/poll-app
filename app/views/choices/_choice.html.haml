@@ -1,0 +1,6 @@
+%div{:id => "#{dom_id choice}"}
+  %p
+    = button_to choice.name, question_choice_answers_path(choice.question, choice)
+  %p
+    %strong Votes:
+    = choice.votes

@@ -1,0 +1,7 @@
+%h1 Editing choice
+= render "form", choice: @choice
+%br/
+%div
+  = link_to "Show this choice", @choice
+  |
+  \#{link_to "Back to choices", choices_path}
